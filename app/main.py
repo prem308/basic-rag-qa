@@ -80,11 +80,11 @@ app.include_router(documents.router)
 app.include_router(query.router)
 
 
-@app.get("/", response_class=HTMLResponse, tags=["Root"])
-async def root():
-    """Serve the main UI."""
-    with open("static/index.html", "r") as f:
-        return f.read()
+# @app.get("/", response_class=HTMLResponse, tags=["Root"])
+# async def root():
+#     """Serve the main UI."""
+#     with open("static/index.html", "r") as f:
+#         return f.read()
 
 
 @app.exception_handler(Exception)
